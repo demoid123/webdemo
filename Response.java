@@ -8,11 +8,17 @@ public class Response {
 	private Date due_in_date;
 	private int total_open_amount;
 	private long invoice_id;
-	//private String invoice_currency;
+	private String invoice_currency;
 	private Date clear_date;
 //	private String Buckets;
 	public String getCust_number() {
 		return cust_number;
+	}
+	public void setInvoice_currency(String invoice_currency) {
+		this.invoice_currency = invoice_currency;
+	}
+	public String getInvoice_currency() {
+		return invoice_currency;
 	}
 	public void setCust_number(String cust_number) {
 		this.cust_number = cust_number;
