@@ -64,9 +64,9 @@ public class FetchData extends HttpServlet {
 				Response res = new Response();
 				res.setCust_number(rs.getString("cust_number"));
 				res.setName_customer(rs.getString("name_customer"));
-//				demo.setBuckets(rs.getString("Buckets"));
+				demo.setBuckets(rs.getString("Buckets"));
 				res.setDue_in_date(rs.getDate("due_in_date"));
-//				demo.setInvoice_currency(rs.getString("invoice_currency"));
+				demo.setInvoice_currency(rs.getString("invoice_currency"));
 				res.setInvoice_id(rs.getLong("invoice_id"));
 				res.setTotal_open_amount(rs.getInt("total_open_amount"));
 				res.setClear_date(rs.getDate("clear_date"));
@@ -108,7 +108,7 @@ public class FetchData extends HttpServlet {
 	private String getJSONStringFromObject(List<Response> filmlist) {
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		String json = gson.toJson(filmlist);
-		//System.out.print(json);
+		System.out.print(json);
 		return json;
 	}
 
